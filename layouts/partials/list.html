@@ -2,6 +2,8 @@
 
     <h1 class="list-title">{{ .Name }}</h1>
 
+    {{ $ref := . }}
+
     {{ .Content }}
 
     {{if eq (len (where .Pages "Params.type" "post") ) 0}}
@@ -13,6 +15,7 @@
             <h2 class="posts-year">{{ .Key }}</h2>
 
             {{- range .Pages -}}
+                {{ .Scratch.Set "ref" $ref}}
                 {{- partial "list-posts.html" . -}}
             {{ end }}
         {{ end }}
