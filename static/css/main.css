@@ -62,7 +62,6 @@ main#content > .container {
 .post.container {
   box-sizing: border-box;
   display: inline-block;
-  padding-left: 20px;
 }
 
 .post-toc {
@@ -427,6 +426,10 @@ table td {
 .post [role="doc-subtitle"] {
   font-size: 1.1em;
   font-style: italic;
+}
+.post {
+  /* Prevent long strings from overflowing */
+  overflow-wrap: break-word;
 }
 .post .post-date, .prev-post-date, .next-post-date {
   color: gray;
