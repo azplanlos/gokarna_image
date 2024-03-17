@@ -10,3 +10,8 @@
     other = 'Vorheriger Eintrag'
 [next]
     other = 'Nächster Eintrag'
+[not-available]
+    other = 'Kein Bild'
+[article]
+    visit_title = "Besucher"
+    visit_name = "mal aufgerufen"

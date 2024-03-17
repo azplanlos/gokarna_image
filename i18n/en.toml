@@ -10,3 +10,8 @@
   other = 'Previous'
 [next]
   other = 'Next'
+[not-available]
+  other = 'not available'
+[article]
+  visit_title = "Page Views"
+  visit_name = "visitors"

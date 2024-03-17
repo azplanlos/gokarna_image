@@ -5,6 +5,11 @@
         <p class="post-date">
             {{ dateFormat "January 2, 2006" .Date }}
         </p>
+        <p class="page-views">
+        {{ if and (.Params.showVisitCount | default (.Site.Params.article.showVisitCount | default true)) }}
+        {{- partial "visit-counter.html" . }}
+        {{ end }}
+        </p>
 
         <ul class="post-tags">
         {{ range .Params.tags }}
@@ -17,11 +22,6 @@
         <p>
             {{ .Content }}
         </p>
-        {{ if .Site.DisqusShortname }}
-        <div class="post-comments">
-            {{ template "_internal/disqus.html" . }}
-        </div>
-        {{ end }}
     </div>
 
     <div class="prev-next">
